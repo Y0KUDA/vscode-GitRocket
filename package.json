@@ -1,0 +1,51 @@
+{
+	"name": "git-rocket",
+	"displayName": "git-rocket",
+	"description": "Git push with gif animation.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.31.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.gitPush",
+		"onCommand:extension.gitPushForce"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.gitPush",
+				"title": "Git-Rocket : Push"
+			},{
+				"command": "extension.gitPushForce",
+				"title": "Git-Rocket : Push Force"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test",
+		"build": "webpack"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^10.12.21",
+		"file-loader": "^3.0.1",
+		"html-webpack-inline-source-plugin": "0.0.10",
+		"html-webpack-plugin": "^3.2.0",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"url-loader": "^1.1.2",
+		"vscode": "^1.1.28",
+		"webpack-cli": "^3.2.3"
+	},
+	"dependencies": {
+		"webpack": "^4.29.5"
+	}
+}
