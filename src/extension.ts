@@ -15,7 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.commands.registerCommand("extension.gitPush", () => {
       let terminal = window.createTerminal("git-rocket");
-      //terminal.sendText('git push',true);
+      terminal.sendText('git push',true);
       let panel = window.createWebviewPanel(
         "git-rocket",
         "git-rocket",
@@ -37,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
         })
         .then(ans => {
           if (ans === "Yes") {
-            //terminal.sendText('git push force',true);
+            terminal.sendText('git push force',true);
             let panel = window.createWebviewPanel(
               "git-rocket",
               "git-rocket",
