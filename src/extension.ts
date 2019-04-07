@@ -28,7 +28,7 @@ export function activate(context: vscode.ExtensionContext) {
       panel.webview.html = rocket_html;
       setTimeout(() => {
         panel.dispose();
-      }, 10000);
+      }, 15000);
     }),
     vscode.commands.registerCommand("extension.gitPushForce", () => {
       let terminal = window.createTerminal("git-missile");
@@ -51,7 +51,7 @@ export function activate(context: vscode.ExtensionContext) {
             panel.webview.html = missile_html;
             setTimeout(() => {
               panel.dispose();
-            }, 10000);
+            }, 8000);
           }
         });
     })
