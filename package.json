@@ -1,8 +1,14 @@
 {
+	"publisher": "Y0KUDA",
 	"name": "git-rocket",
 	"displayName": "git-rocket",
 	"description": "Git push with gif animation.",
 	"version": "0.0.1",
+	"license": "SEE LICENSE IN LICENSE.txt",
+	"repository": {
+	  "type": "git",
+	  "url": "https://github.com/Y0KUDA/vscode-GitRocket.git"
+	},
 	"engines": {
 		"vscode": "^1.31.0"
 	},
@@ -19,7 +25,8 @@
 			{
 				"command": "extension.gitPush",
 				"title": "Git-Rocket : Push"
-			},{
+			},
+			{
 				"command": "extension.gitPushForce",
 				"title": "Git-Rocket : Push Force"
 			}
