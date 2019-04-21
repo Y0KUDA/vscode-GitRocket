@@ -38,7 +38,7 @@ export function activate(context: vscode.ExtensionContext) {
         })
         .then(ans => {
           if (ans === "Yes") {
-            terminal.sendText('git push force',true);
+            terminal.sendText('git push --force',true);
             terminal.show();
             let panel = window.createWebviewPanel(
               "git-rocket",
